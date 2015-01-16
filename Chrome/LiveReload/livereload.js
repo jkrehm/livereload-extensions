@@ -128,7 +128,7 @@ var Connector, PROTOCOL_6, PROTOCOL_7, Parser, Version, _ref;
 
 _ref = __protocol, Parser = _ref.Parser, PROTOCOL_6 = _ref.PROTOCOL_6, PROTOCOL_7 = _ref.PROTOCOL_7;
 
-Version = '2.0.8';
+Version = '2.0.9';
 
 __connector.Connector = Connector = (function() {
 
@@ -138,7 +138,7 @@ __connector.Connector = Connector = (function() {
     this.WebSocket = WebSocket;
     this.Timer = Timer;
     this.handlers = handlers;
-    this._uri = "ws://" + this.options.host + ":" + this.options.port + "/livereload";
+    this._uri = "wss://" + this.options.host + ":" + this.options.port + "/livereload";
     this._nextDelay = this.options.mindelay;
     this._connectionDesired = false;
     this.protocol = 0;
@@ -918,7 +918,7 @@ __livereload.LiveReload = LiveReload = (function() {
       liveImg: (_ref2 = message.liveImg) != null ? _ref2 : true,
       originalPath: message.originalPath || '',
       overrideURL: message.overrideURL || '',
-      serverURL: "http://" + this.options.host + ":" + this.options.port
+      serverURL: "https://" + this.options.host + ":" + this.options.port
     });
   };
 

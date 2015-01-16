@@ -153,8 +153,8 @@ LiveReloadGlobal =
       ws.close()
     timeout = setTimeout(failOnTimeout, 1000)
 
-    console.log "Connecting to ws://#{@host}:#{@port}/livereload..."
-    ws = new TheWebSocket("ws://#{@host}:#{@port}/livereload")
+    console.log "Connecting to wss://#{@host}:#{@port}/livereload..."
+    ws = new TheWebSocket("wss://#{@host}:#{@port}/livereload")
     ws.onerror = =>
       console.log "Web socket error."
       callback('cannot-connect') unless callbackCalled
@@ -186,7 +186,7 @@ LiveReloadGlobal =
         xhr.onerror = (event) =>
           callback('cannot-download') unless callbackCalled
           callbackCalled = yes
-        xhr.open("GET", "http://#{@host}:#{@port}/livereload.js", true)
+        xhr.open("GET", "https://#{@host}:#{@port}/livereload.js", true)
         xhr.send(null)
 
 

@@ -63,7 +63,7 @@ class LiveReloadInjected
       if @_verbose
         console.log "Loading LiveReload.js bundled with the browser extension..."
     else
-      url = "http://#{@host}:#{@port}/livereload.js?ext=#{@extName}&extver=#{ExtVersion}"
+      url = "https://#{@host}:#{@port}/livereload.js?ext=#{@extName}&extver=#{ExtVersion}"
       if @_verbose
         console.log "Loading LiveReload.js from #{url.replace(/\?.*$/, '')}..."
 
